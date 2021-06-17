@@ -1,0 +1,49 @@
+.footer{
+    width: 100%;
+    justify-content: center;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: ivory;
+}
+
+.options {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.twitter{
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.logo1{
+    background-color: white;
+    
+    &:hover {
+        cursor: pointer;
+      }
+    }
+
+.logo2{
+    background-color: white;
+
+    &:hover {
+        cursor: pointer;
+      }
+    }
+
+.logo3{
+    background-color: white;
+
+    &:hover {
+        cursor: pointer;
+      }
+    }
