@@ -3,3 +3,7 @@ body {
     background-color: ivory;
     padding: 20px 60px;
 }
+a {
+    text-decoration: none;
+    color: black
+}
