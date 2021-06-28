@@ -10,7 +10,9 @@ import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up
 import CheckoutPage from './pages/checkout/checkout.component';
 import Header from './components/header/header.component';
 import Footer from './components/footer/footer.component';
-import {auth, createUserProfileDocument } from './firebase/firebase.utils';
+import {auth, createUserProfileDocument} from './firebase/firebase.utils';
+
+
 import {setCurrentUser} from './redux/user/user.actions';
 import {selectCurrentUser} from './redux/user/user.selector'
 
@@ -33,10 +35,9 @@ class App extends React.Component {
               ...snapShot.data()
             })
         });
-      } else{
-        setCurrentUser(userAuth);
       }
-    })
+        setCurrentUser(userAuth);
+    });
   }
 
   componentWillUnmount(){
@@ -77,7 +78,7 @@ const mapStateToProps = createStructuredSelector({
 
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
-})
+});
 
 export default connect(
   mapStateToProps, 
