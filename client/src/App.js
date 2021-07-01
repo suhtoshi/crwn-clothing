@@ -10,6 +10,7 @@ import CheckoutPage from './pages/checkout/checkout.component';
 import Header from './components/header/header.component';
 import Footer from './components/footer/footer.component';
 
+
 import { GlobalStyle } from './global.styles';
 
 import {checkUserSession} from './redux/user/user.actions'
@@ -27,22 +28,22 @@ const App = ({checkUserSession, currentUser}) => {
       <div>
         <GlobalStyle />
         <Header />
-        <Switch>
-          <Route exact path='/' component={HomePage} />
-          <Route path='/shop' component={ShopPage} />
-          <Route exact path='/checkout' component={CheckoutPage} />
-          <Route
-            exact 
-            path='/signin' 
-            render={() => 
-              currentUser ? (
-              <Redirect to='/'/>
-              ):(
-              <SignInAndSignUpPage />
-              )
-            }
-          />
-        </Switch>
+          <Switch>
+            <Route exact path='/' component={HomePage} />
+            <Route path='/shop' component={ShopPage} />
+            <Route exact path='/checkout' component={CheckoutPage} />
+            <Route
+              exact 
+              path='/signin' 
+              render={() => 
+                currentUser ? (
+                <Redirect to='/'/>
+                ):(
+                <SignInAndSignUpPage />
+                )
+              }
+            />
+          </Switch>
         <Footer />
       </div>
     );
